@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Random Numbers CAP" content="Carlos Alberto Paz Moreno - Ejercicio js con números aleatorios">
+    <meta description="Ejercicios números aleatorios - CAP">
+    <meta author="Carlos Paz">
+    <title>Random Numbers CAP</title>
+    <!--Inserción jQuery dependencia de Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<style>
+    .item1 {grid-area: header;}
+    .item2 {grid-area: iterac;}
+    .item3 {grid-area: num_1;}
+    .item4 {grid-area: num_2;}
+    .item5 {grid-area: num_3;}
+    .item6 {grid-area: num_4;}
+    .item7 {grid-area: num_5;}
+    .item8 {grid-area: sbal;}
+    .item9 {grid-area: buttons;}
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: auto;
+        grid-template-areas: 
+        
+        'header header header header header header'
+        'iterac iterac iterac iterac iterac iterac'
+        'num_1 num_2 num_3 num_4 num_5 sbal'
+        'buttons buttons buttons buttons buttons buttons';
+        grid-gap: 2px;
+        padding: 2px;
+        text-align-last: center;
+    }
+</style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="grid-container">
+            <div class="item1">
+                <h1><b><i>Random Numbers CAP</i></b></h1>
+            </div>
+            
+            <div class="item2">
+                <h2>Definir iteración para el cálculo:</h2>
+                <input type="text" id="iterac">
+                <br>
+                <br>
+            </div>            
+
+            <div class="item3">
+                <h4>Número 1:</h4>
+                <input type="text" id="num_1">
+                <br>
+                <br>                
+            </div>
+
+            <div class="item4">
+                <h4>Número 2:</h4>
+                <input type="text" id="num_2">
+                <br>
+                <br>
+            </div>
+
+            <div class="item5">
+                <h4>Número 3:</h4>
+                <input type="text" id="num_3">
+                <br>
+                <br>
+            </div>
+
+            <div class="item6">
+                <h4>Número 4:</h4>
+                <input type="text" id="num_4">
+                <br>
+                <br>
+            </div>
+
+            <div class="item7">
+                <h4>Número 5:</h4>
+                <input type="text" id="num_5">
+                <br>
+                <br>
+            </div>
+
+            <div class="item8">
+                <h4>Número 6 (SB):</h4>
+                <input type="text" id="sbal">
+                <br>
+                <br>
+            </div>
+
+            <div class="item9">
+                <input type="button" id="calc" onclick="random()" value="Calcular">                
+                <input type="button" id="clear" onclick="clear_random()" value="Limpiar">
+                <script src="random_numbers.js"></script> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
